@@ -72,3 +72,8 @@ def ai_status():
 def connect():
     # Return True so backend can confirm connectivity
     return {"ai_to_backend_connection": True}
+
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
